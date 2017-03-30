@@ -104,27 +104,27 @@ Bahsettiğimiz metot olmasaydı aynı işi yapabilmek için aşağıdaki "if" ko
     {
         if(item.UrunDurumu == "10")
         {
-            item.UrunDurumu = "Hurdaya Ayrıldı."
+            item.UrunDurumu = "Hurdaya Ayrıldı.";
         }
         else if (item.UrunDurumu == "20")
         {
-            item.UrunDurumu = "Bakım Yapılıyor."
+            item.UrunDurumu = "Bakım Yapılıyor.";
         }
         else if (item.UrunDurumu == "30")
         {
-            item.UrunDurumu = "Tamir Ediliyor."
+            item.UrunDurumu = "Tamir Ediliyor.";
         }
         else if (item.UrunDurumu == "40")
         {
-            item.UrunDurumu = "Sorun Çözüldü."
+            item.UrunDurumu = "Sorun Çözüldü.";
         }
         else if (item.UrunDurumu == "50")
         {
-            item.UrunDurumu = "Ürün Teslim Edildi."
+            item.UrunDurumu = "Ürün Teslim Edildi.";
         }
         else
         {
-            item.UrunDurumu = "Bilinmiyor."
+            item.UrunDurumu = "Bilinmiyor.";
         }
     }
 
