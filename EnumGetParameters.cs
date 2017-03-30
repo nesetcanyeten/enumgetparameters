@@ -62,9 +62,5 @@ namespace X.Web.MVC.Models
 
                 return forattedNames;
             }
-        public String GetEnumFormattedNamesNoData()
-        {
-            return "Veri Girilmemiş";
-        }
     }
 }
