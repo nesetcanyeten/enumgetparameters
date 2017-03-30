@@ -1,5 +1,7 @@
 # C# Dilinde Enumaration (Enum) Yapıları Kullanarak Kod Yükünden Kurtulma
 
+![metin](https://www.google.com.tr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiu2u-L1v3SAhVEXhoKHeDwCFoQjRwIBw&url=https%3A%2F%2Fwww.takasbank.com.tr%2Ftr%2FSayfalar%2FNumaralandirma.aspx&bvm=bv.151426398,bs.2,d.bGg&psig=AFQjCNEHOhBSVx42lzSFeWMR80wtYKWD6Q&ust=1490944025919899)
+
 Enumaration ya da Enum, yazılımda kullanılacak değişkenlerin alabileceği değerlerin her zaman aynı olduğu durumlarda kullanılır. Yazılan kodun daha okunaklı ve düzenli olmasını sağlar. En genel haliyle "enum" yapısı aşağıdaki gibi ifade edilir:
 
 
