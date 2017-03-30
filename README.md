@@ -1,9 +1,6 @@
 # C# Dilinde Enumaration (Enum) Yapıları Kullanarak Kod Yükünden Kurtulma
 
-![enum](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSS67l7197obfrGo9lllkw-otRVpq_lrFZpuPRSnMasWqu1Zuc0VA)
-
 Enumaration ya da Enum, yazılımda kullanılacak değişkenlerin alabileceği değerlerin her zaman aynı olduğu durumlarda kullanılır. Yazılan kodun daha okunaklı ve düzenli olmasını sağlar. En genel haliyle "enum" yapısı aşağıdaki gibi ifade edilir:
-
 
     public enum Bitki
     {
@@ -11,7 +8,6 @@ Enumaration ya da Enum, yazılımda kullanılacak değişkenlerin alabileceği d
     }
 
     string[] Bitkiler = Enum.Getnames(typeof(Bitki));
-
 
 Bu kod ‘Bitki’ isimli "enum"daki sabitleri yani tanımlanan bitkileri ‘Bitkiler’ adlı diziye atar.
 
