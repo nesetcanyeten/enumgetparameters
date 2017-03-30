@@ -130,5 +130,5 @@ Bahsettiğimiz metot olmasaydı aynı işi yapabilmek için aşağıdaki "if" ko
 
 Kod parçasından da anlaşılacağı gibi yüksek miktarda farklı değer için yüzlerce defa "if" kontrolü yazmak zorunda kalacaktık. Veritabanından gelen yüksek miktardaki veriyi de düşünürsek önerdiğimiz metot bizi ağır bir yükten kurtarmaktadır.
 
-[Şinasi Durmuş](https://github.com/sinasidurmus)
+[Şinasi Durmuş](https://github.com/sinasidurmus), 
 [Neşet Can Yeten](https://github.com/nesetcanyeten)
