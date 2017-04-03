@@ -1,4 +1,4 @@
-# C# Dilinde Enumaration (Enum) Yapıları Kullanarak Kod Yükünden Kurtulma
+# C# Dilinde Enumaration (Enum) Kullanarak Kod Yükünden Kurtulma
 
 Enumaration ya da Enum, yazılımda kullanılacak değişkenlerin alabileceği değerlerin her zaman aynı olduğu durumlarda kullanılır. Yazılan kodun daha okunaklı ve düzenli olmasını sağlar. En genel haliyle "enum" yapısı aşağıdaki gibi ifade edilir:
 
