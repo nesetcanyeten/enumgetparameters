@@ -11,7 +11,7 @@ Enumaration ya da Enum, yazılımda kullanılacak değişkenlerin alabileceği d
 
 Bu kod ‘Bitki’ isimli "enum"daki sabitleri yani tanımlanan bitkileri ‘Bitkiler’ adlı diziye atar.
 
-Yazdığımız kodda sık kullandığımız ifadelere belirli numaralar vererek ihtiyaç duyduğumuzda çağırmak ya da veri kaydı sırasında uzun ifadeler yerine onu tanımlayan eden numarayı kaydetmek mantıklı bir davranış olacaktır. Kaydettiğimiz sayının tanımladığı ifadeyi "enum" yapısı kullanarak çağırabiliriz. Aşağıda tanımladığımız "enum" türü bu amaçla oluşturulmuştur.
+Yazdığımız kodda sık kullandığımız ifadelere belirli numaralar vererek ihtiyaç duyduğumuzda çağırmak ya da veri kaydı sırasında uzun ifadeler yerine onu tanımlayan numarayı kaydetmek mantıklı bir davranış olacaktır. Kaydettiğimiz sayının tanımladığı ifadeyi "enum" yapısı kullanarak çağırabiliriz. Aşağıda tanımladığımız "enum" türü bu amaçla oluşturulmuştur.
 
         public enum Durum
         {
