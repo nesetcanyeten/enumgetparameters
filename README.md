@@ -32,54 +32,53 @@ Veritabanımızda, "Durum" "enum"ındaki cümleler yerine bu cümleleri ifade ed
     public class EnumGetParameters
     {
         public EnumGetParameters() { }
+
         public string GetEnumDescription(Enum currentEnum)
-            {
-                string description = String.Empty;
-                DescriptionAttribute da;
+        {
+            string description = String.Empty;
+            DescriptionAttribute da;
 
-                FieldInfo fi = currentEnum.GetType().
-                            GetField(currentEnum.ToString());
+            FieldInfo fi = currentEnum.GetType().GetField(currentEnum.ToString());
 
-                da = (DescriptionAttribute)Attribute.GetCustomAttribute(fi,
-                            typeof(DescriptionAttribute));
-                if (da != null)
-                    description = da.Description;
-                else
-                    description = currentEnum.ToString();
+            da = (DescriptionAttribute)Attribute.GetCustomAttribute(fi, typeof(DescriptionAttribute));
+            if (da != null)
+                description = da.Description;
+            else
+                description = currentEnum.ToString();
 
-                return description;
-            }
+            return description;
+        }
 
         public Dictionary<string, string> GetEnumFormattedNames<TEnum>()
+        {
+            var enumType = typeof(TEnum);
+            if (enumType == typeof(Enum))
+                throw new ArgumentException("typeof(TEnum) == System.Enum", "TEnum");
+
+            if (!(enumType.IsEnum))
+                throw new ArgumentException(String.Format("typeof({0}).IsEnum == false", enumType), "TEnum");
+
+            FieldInfo[] fields = enumType.GetFields();
+            Dictionary<string, string> forattedValues = new Dictionary<string, string>();
+            foreach (var field in fields)
             {
-                var enumType = typeof(TEnum);
-                if (enumType == typeof(Enum))
-                    throw new ArgumentException("typeof(TEnum) == System.Enum", "TEnum");
+                if (field.Name.Equals("value__")) continue;
+                var fieldValue = field.GetRawConstantValue();
 
-                if (!(enumType.IsEnum))
-                    throw new ArgumentException(String.Format("typeof({0}).IsEnum == false", enumType), "TEnum");
-
-                FieldInfo[] fields = enumType.GetFields();
-                Dictionary<string, string> forattedValues = new Dictionary<string, string>();
-                foreach (var field in fields)
-                {
-                    if (field.Name.Equals("value__")) continue;
-                    var fieldValue = field.GetRawConstantValue();
-
-                    forattedValues.Add(field.Name.ToString(), fieldValue.ToString());
-                }
-
-                Dictionary<string, string> forattedNames = new Dictionary<string, string>();
-                var vrs = Enum.GetValues(typeof(TEnum));
-                var list = Enum.GetValues(enumType).OfType<TEnum>().ToList<TEnum>();
-
-                foreach (TEnum item in list)
-                {
-                    forattedNames.Add(forattedValues[item.ToString()], GetEnumDescription(item as Enum));
-                }
-
-                return forattedNames;
+                forattedValues.Add(field.Name.ToString(), fieldValue.ToString());
             }
+
+            Dictionary<string, string> forattedNames = new Dictionary<string, string>();
+            var vrs = Enum.GetValues(typeof(TEnum));
+            var list = Enum.GetValues(enumType).OfType<TEnum>().ToList<TEnum>();
+
+            foreach (TEnum item in list)
+            {
+                forattedNames.Add(forattedValues[item.ToString()], GetEnumDescription(item as Enum));
+            }
+
+            return forattedNames;
+        }
     }
 
 Yukarıda oluşturduğumuz metodu aşağıdaki gibi çağırırız. Çağırdığımız "enum"daki tüm veriler durumlar değişkenine doldurulur. Veritabanından çekilen her ürün için sayı halindeki UrunDurumu değişkenine "enum"ımızdaki cümleler atanır.
