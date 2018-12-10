@@ -97,11 +97,11 @@ Yukarıda oluşturduğumuz metodu aşağıdaki gibi çağırırız. Çağırdı�
 
 şeklinde atanır.
 
-Bahsettiğimiz metot olmasaydı aynı işi yapabilmek için aşağıdaki "if" kontrollerini yazmamız gerekecekti.
+Bahsettiğimiz metod olmasaydı aynı işi yapabilmek için aşağıdaki "if" kontrollerini yazmamız gerekecekti.
 
     foreach (var item in urunler)
     {
-        if(item.UrunDurumu == "10")
+        if (item.UrunDurumu == "10")
         {
             item.UrunDurumu = "Hurdaya Ayrıldı.";
         }
